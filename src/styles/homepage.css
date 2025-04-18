@@ -1,0 +1,123 @@
+.home_page{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+}
+
+.home_page_heading{
+    text-align: center;
+    font: 600 24px 'Helvetica Neue';
+}
+
+.home_page_allBooks{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gome_page_fallBack_UI {
+    text-align: center;
+    font: 600 16px 'Helvetica Neue', sans-serif;
+    width: 100%;
+    grid-column: 1 / -1;
+    color: #555;
+    margin-top: 2rem;
+}
+
+.home_page_book{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color:#f8f8f8;
+    padding: 12px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.home_page_book_image{
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.home_page_book_description{
+    width: 100%;
+}
+
+.home_page_book_heart{
+    padding: 6px;
+    background-color: #ffe8e8;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #ff4343;
+    border-radius: 6px;
+    font: 600 13px 'Helvetica Neue';
+    
+}
+
+.home_page_book_buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+.hp_book_favourite{
+    background-color: #fff0f0;
+    padding: 5px;
+    border-radius: 4px;
+    color: #026fff;
+    cursor: pointer;
+}
+
+.hp_book_edit{
+    background-color: #dcebff;
+    padding: 5px;
+    border-radius: 4px;
+    color: #026fff;
+    cursor: pointer;
+}
+
+.hp_book_delete{
+    background-color: #e2e2e2;
+    padding: 5px;
+    border-radius: 4px;
+    color: #393939;
+    cursor: pointer;
+}
+
+@media screen and (width < 800px) and (width > 490px) {
+
+    .home_page_allBooks{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+    
+
+}
+
+@media screen and (width < 490px) and (width > 200px) {
+
+    .home_page_allBooks{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 12px;
+    } 
+
+}

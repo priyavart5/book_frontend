@@ -1,0 +1,85 @@
+.addBookModal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.addBookModal_container{
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.addBookModal_fields{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.addBookModal_buttons{
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+
+.addBookModal_add{
+  cursor: pointer;
+  background-color: #026fff;
+  padding: 9px 12px;
+  border: none;
+  border-radius: 6px;
+  font: 500 13px 'Helvetica Neue';
+  color: #fff;
+}
+
+.addBookModal_input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d8d8da;
+}
+
+.addBookModal_close{
+  cursor: pointer;
+  background-color: #ff6b6b;
+  padding:9px 14px;
+  border: none;
+  border-radius: 6px;
+  font: 500 13px 'Helvetica Neue';
+  color: #fff;
+}
+
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
