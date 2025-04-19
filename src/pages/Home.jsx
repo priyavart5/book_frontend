@@ -6,15 +6,27 @@ import Navbar from '../components/Navbar';
 import { Heart, Trash, Pencil } from 'lucide-react';
 import { deleteBook, favourite } from '../services/bookService';
 import { Toaster, toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
 
 
 const Home = () => {
+  const token = Cookies.get("token");
+  const navigate = useNavigate();
+
   const [books, setBooks] = useState([]);
   const [showAddBook, setShowAddBook] = useState(false);
   const [editBook, setEditBook] = useState(null);
   const [showFavouritesFirst, setShowFavouritesFirst] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    if (token) {
+      navigate("/home");
+    } else {
+      navigate("/");
+    }
+  }, [navigate, token]);
 
   useEffect(() => {
     const fetchBooks = async () => {
